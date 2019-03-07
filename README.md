@@ -1,4 +1,4 @@
-
+In order to navigator specific view..</br>
 You should create your own Activity, inherited from FlutterActivity; override createFlutterView.
 ```Java
 public class MainActivity extends FlutterActivity {
