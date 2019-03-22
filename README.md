@@ -1,3 +1,5 @@
+> small demo </br> flutter is embedded in Android
+
 In order to navigator specific view..</br>
 You should create your own Activity, inherited from FlutterActivity; override createFlutterView.
 ```Java
