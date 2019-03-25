@@ -18,7 +18,8 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+        maven { url "https://jitpack.io" }
+        maven{url "https://raw.githubusercontent.com/huangbao21/chips_flutter_library/master"}
     }
 }
 
