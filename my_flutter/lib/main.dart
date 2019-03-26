@@ -8,7 +8,7 @@ void main() => runApp(_widgetForRoute(window.defaultRouteName));
 
 
 Widget _widgetForRoute(String route) {
-  print('dddddddddddd'+route);
+  print('aaaaa'+route);
   switch (route) {
     case '/route1':
       return MyApp();
@@ -160,7 +160,7 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.display1,
             ),
             RaisedButton(
-              child: Text('Get Battery Level'),
+              child: Text('Get Battery Level12'),
               onPressed: _getBatteryLevel,
             ),
             RaisedButton(

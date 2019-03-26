@@ -52,9 +52,9 @@ apply plugin: 'maven'
 ext {
     // 从Github上clone下来的项目的本地地址
     GITHUB_REPO_PATH = "D:\\f\\github\\chips_flutter_library"
-    PUBLISH_GROUP_ID = 'com.chips_flutter_library'
+    PUBLISH_GROUP_ID = 'bj.chips'
     PUBLISH_ARTIFACT_ID = 'test_flutter_library'
-    PUBLISH_VERSION = '1.0.1'
+    PUBLISH_VERSION = '1.0.0'
 }
 uploadArchives {
     repositories {
@@ -69,12 +69,4 @@ uploadArchives {
             }
         }
     }
-}
-// 源代码一起打包(不需要打包源代码的不要添加这几行)
-task androidSourcesJar(type: Jar) {
-    classifier = 'sources'
-    from android.sourceSets.main.java.sourceFiles
-}
-artifacts {
-    archives androidSourcesJar
 }

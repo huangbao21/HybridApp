@@ -21,10 +21,15 @@ android {
         targetCompatibility 1.8
     }
 }
-
+configurations.all {
+    //每隔10分钟..
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    // 采用动态版本声明的依赖缓存10分钟
+//    resolutionStrategy.cacheDynamicVersionsFor 10*60, 'seconds'
+}
 dependencies {
 
-    implementation 'com.chips_flutter_library:test_flutter_library:1.0.1'
+    implementation 'bj.chips:test_flutter_library:1.0.0'
 //    implementation project(':flutter')
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:28.0.0'
