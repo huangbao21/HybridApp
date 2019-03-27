@@ -1,23 +1,5 @@
-> small demo </br> flutter is embedded in Android
+当前仓库是Android集成Flutter的demo，供自己测试验证
+在 Issues中有关于在实战中总结的一些集成和Flutter运用的知识点
 
-In order to navigator specific view..</br>
-You should create your own Activity, inherited from FlutterActivity; override createFlutterView.
-```Java
-public class MainActivity extends FlutterActivity {
-    @Override
-    public FlutterView createFlutterView(Context context) {
-        WindowManager.LayoutParams matchParent = new WindowManager.LayoutParams(-1, -1);
-        FlutterNativeView nativeView = this.createFlutterNativeView();
-        FlutterView flutterView = new FlutterView(this, (AttributeSet) null, nativeView);
-        flutterView.setInitialRoute("/dashboard");
-        flutterView.setLayoutParams(matchParent);
-        this.setContentView(flutterView);
-        return flutterView;
-    }
-}
-
-```
-then
-```Java
-startActivity(new Intent(this,MainActivity.class));
-```
+不定期更新~~
+欢迎 star  :)
