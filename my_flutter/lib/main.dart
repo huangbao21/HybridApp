@@ -2,38 +2,39 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
 const platform = const MethodChannel('samples.flutter.io/message');
-// void main() => runApp(InitPage());
-void main() => runApp(_widgetForRoute(window.defaultRouteName));
+void main() => runApp(InitPage());
+// void main() => runApp(_widgetForRoute(window.defaultRouteName));
 
+// Widget _widgetForRoute(String route) {
+//   print('aaaaa' + route);
+//   switch (route) {
+//     case '/route1':
+//       return MyApp();
+//       break;
+//     case 'route2':
+//       return DefaultPage();
+//     default:
+//       return DefaultPage();
+//   }
+// }
 
-Widget _widgetForRoute(String route) {
-  print('aaaaa'+route);
-  switch (route) {
-    case '/route1':
-      return MyApp();
-      break;
-    case 'route2':
-      return DefaultPage();
-    default:
-      return DefaultPage();
-  }
-}
 class InitPage extends StatelessWidget {
   var temp = window.defaultRouteName;
   @override
   Widget build(BuildContext context) {
     print('Flutter routes $temp');
-   return MaterialApp(
+    return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/',
+      initialRoute: window.defaultRouteName,
       routes: {
         "/": (context) => DefaultPage(),
         "/route1": (context) => MyApp(),
-        "/route2": (context) => DefaultPage(),
+        "/route2": (context) => testDialog(context),
       },
       // home: TaskPage(),
     );
@@ -41,7 +42,6 @@ class InitPage extends StatelessWidget {
 }
 
 class DefaultPage extends StatelessWidget {
-    
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -178,4 +178,18 @@ class _MyHomePageState extends State<MyHomePage> {
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
+}
+
+Widget testDialog(BuildContext context) {
+  return SimpleDialog(
+    title: Text('android view direct to show flutter view'),
+    children: <Widget>[
+      SimpleDialogOption(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        child: Text('click me'),
+      ),
+    ],
+  );
 }

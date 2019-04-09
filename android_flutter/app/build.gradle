@@ -29,8 +29,8 @@ configurations.all {
 }
 dependencies {
 
-    implementation 'bj.chips:test_flutter_library:1.0.0'
-//    implementation project(':flutter')
+//    implementation 'bj.chips:test_flutter_library:1.0.0'
+    implementation project(':flutter')
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'

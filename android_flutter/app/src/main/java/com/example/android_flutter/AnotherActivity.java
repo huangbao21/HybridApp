@@ -15,6 +15,7 @@ import android.view.WindowManager;
 import android.widget.FrameLayout;
 
 import io.flutter.app.FlutterActivity;
+import io.flutter.app.FlutterFragmentActivity;
 import io.flutter.facade.Flutter;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
@@ -24,7 +25,7 @@ import io.flutter.view.FlutterMain;
 import io.flutter.view.FlutterNativeView;
 import io.flutter.view.FlutterView;
 
-public class AnotherActivity extends FlutterActivity {
+public class AnotherActivity extends FlutterFragmentActivity {
     private static final String CHANNEL = "samples.flutter.io/message";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
