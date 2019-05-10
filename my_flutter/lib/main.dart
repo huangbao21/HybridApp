@@ -31,12 +31,12 @@ class InitPage extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       initialRoute: window.defaultRouteName,
-      routes: {
-        "/": (context) => DefaultPage(),
-        "/route1": (context) => MyApp(),
-        "/route2": (context) => testDialog(context),
-      },
-      // home: TaskPage(),
+      // routes: {
+      //   "/": (context) => DefaultPage(),
+      //   "/route1": (context) => MyApp(),
+      //   "/route2": (context) => testDialog(context),
+      // },
+      home: MyApp(),
     );
   }
 }
@@ -46,7 +46,7 @@ class DefaultPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: RaisedButton(
-      child: Text('DefaultPage to AnotherActivity'),
+      child: Text('DefaultPage'),
       onPressed: _JumpOne,
     ));
   }

@@ -31,7 +31,6 @@ public class AnotherActivity extends FlutterFragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         FlutterMain.startInitialization(this.getApplicationContext());
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
         GeneratedPluginRegistrant.registerWith(this);
         new MethodChannel(getFlutterView(),CHANNEL).setMethodCallHandler(
                 (methodCall, result) -> {
